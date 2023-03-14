@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tabla de Multiplicar</title>
+</head>
+
+<body>
+    <script>
+        function multiplicar() {
+            let n = 0, i = 0, c = "";
+            n = parseInt(document.getElementById("n1").value);
+            c = c + "<table border='1'>";
+            for (i = 1; i <= 10; i++) {
+                c = c + "<tr><td>" + n + "</td><td>X</td><td>" + i + "</td><td>" + (n * i) + "</td></tr><tr><td>" + n + "</td><td>X</td><td>" + i + "</td><td>" + (n * i) + "</td></tr>";
+            }
+            c = c + "</table>";
+            document.getElementById('res').innerHTML = c
+        }
+    </script>
+
+    <body>
+        Numero:
+        <input type="text" name="" id="n1" value="">
+        <br>
+        <button onclick="multiplicar();">tabla</button>
+        <br>
+        <p id="res"></p>
+    </body>
+</body>
+
+</html>

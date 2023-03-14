@@ -1,0 +1,93 @@
+<html>
+
+<head>
+    <title>Formulario Alumno</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <script>
+        function mostrar() {
+            var reg_1 = document.getElementById("nombre");
+            var reg_2 = document.getElementById("apellido");
+            var reg_3 = document.getElementById("edad");
+            var reg_4 = document.getElementById("ciudad");
+            var reg_5="",reg_6="",reg_7="",reg_8="",reg_9="";
+
+            if (document.getElementById("r_publico").checked) {
+                reg_5 = document.getElementById("r_publico").value;
+            }
+            if (document.getElementById("r_privado").checked) {
+                reg_5 = document.getElementById("r_privado").value;
+            }            
+            if (document.getElementById('carnet').checked) {
+                reg_6 = document.getElementById("carnet").value;
+            }
+            if (document.getElementById('ci').checked) {
+                reg_7 = document.getElementById("ci").value;
+            }
+            if (document.getElementById('actaNacimiento').checked) {
+                reg_8 = document.getElementById("actaNacimiento").value;
+            }
+            if (document.getElementById('certificadoEstudio').checked) {
+                reg_9 = document.getElementById("certificadoEstudio").value;
+            }
+            document.write(
+                "<table cellpadding='5' cellspacing='0' border='1'>" +
+                "<tr> <td>Nombre</td> <td>Apellido</td> <td>Edad</td> <td>Ciudad</td> <td>Colegio</td> <td>Documentos</td> </tr>" +
+                "<tr> <td>" + reg_1.value + "</td> <td>" + reg_2.value + "</td> <td>" + reg_3.value + "</td> <td>" + reg_4.value + "</td> <td>" + reg_5 + "</td>"+
+                "<td ><ul style='list-style-type:none;'><li>"+reg_6+"</li><li>"+reg_7+"</li><li>"+reg_8+"</li><li>"+reg_9+"</li></ul></td></tr></table>"
+            );
+        }
+    </script>
+    <form id="myForm">
+        <h1>Formulario</h1>
+        <label>Nombre:</label>
+        <input type="text" name="txtNombre" id="nombre">
+        <br>
+        <br>
+        <label>Apellido:</label>
+        <input type="text" name="txtApellido" id="apellido">
+        <br>
+        <br>
+        <label>Edad:</label>
+        <input type="text" name="txtEdad" id="edad">
+        <br>
+        <br>
+        <label>Ciudad</label>
+        <select name="ciudades" id="ciudad">
+            <option value="Villarica"> Villarica</option>
+            <option value="Asuncion">Asuncion</option>
+            <option value="Coronel Oviedo" selected>Coronel Oviedo</option>
+            <option value="Paraguari">Paraguari</option>
+            <option value="Campo 9">Campo 9</option>
+        </select>
+        <br>
+        <label>Colegio de procedencia:</label>
+        <br>
+        <input type="radio" name="txtColegio" id="r_publico" value="Publico">
+        <label>Publico</label>
+        <br>
+        <input type="radio" name="txtColegio" id="r_privado" value="Privado">
+        <label>Privado</label>
+        <br>
+        <label>Documentos Presentados</label>
+        <br>
+        <input type="checkbox" id="carnet" name="doc1" value="Foto tipo carnet">
+        <Label>Foto tipo carnet</Label>
+        <br>
+        <input type="checkbox" id="ci" name="doc2" value="Fotocopia de CI">
+        <Label> Fotocopia de CI</Label>
+        <br>
+        <input type="checkbox" id="actaNacimiento" name="doc3" value="Acta de nacimiento">
+        <Label>Acta de nacimiento</Label>
+        <br>
+        <input type="checkbox" id="certificadoEstudio" name="doc4" value="Certificao de estudio">
+        <Label>Certificao de estudio</Label>
+        <br>
+        <input type="reset" name="restablecer" value="Cancelar">
+        <input type="button" onclick="mostrar()" value="Cargar" />
+    </form>
+</body>
+
+</html>

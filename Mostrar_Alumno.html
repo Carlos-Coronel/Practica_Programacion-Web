@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Alunmos</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        function myCanvas(imagen, canvas) {
+            var c = document.getElementById(canvas);
+            var ctx = c.getContext("2d");
+            var img = new Image();
+            img.src = imagen;
+            img.onload = function () {
+                ctx.drawImage(img, 10, 10);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Programacion WEB 2023</h1>
+    <div class="contenedor-testimonio">
+        <img src="imagenes/Logo.png" />
+        <div class="contenedor-txt-testimonio">
+            <p class="nombre-alumno">
+                Carlos Coronel
+            </p>
+            <p class="carrera-alumno">
+                Ingeniería Informatica
+            </p>
+            <p class="universidad-alumno">
+                Facultad de Ciencias y Tecnologías
+            </p>
+            <button class="button" onclick="myCanvas('imagenes/Carlos.jpg','myCanvas')">Button</button>
+        </div>
+        <canvas id="myCanvas" width="300" height="300">
+            Tu navegador no soporta canvas.
+        </canvas>
+    </div>
+    <div class="contenedor-testimonio">
+        <img src="imagenes/Logo.png" />
+        <div class="contenedor-txt-testimonio">
+            <p class="nombre-alumno">
+                Fabrizio Villar
+            </p>
+            <p class="carrera-alumno">
+                Ingeniería Informatica
+            </p>
+            <p class="universidad-alumno">
+                Facultad de Ciencias y Tecnologías
+            </p>
+            <button class="button" onclick="myCanvas('imagenes/Fabrizio.jpg', 'myCanvas1')">Button</button>
+        </div>
+        <canvas id="myCanvas1" width="300" height="300">
+            Tu navegador no soporta canvas.
+        </canvas>
+    </div>
+    <div class="contenedor-testimonio">
+        <img src="imagenes/Logo.png" />
+        <div class="contenedor-txt-testimonio">
+            <p class="nombre-alumno">
+                Roberto Saucedo
+            </p>
+            <p class="carrera-alumno">
+                Ingeniería Informatica
+            </p>
+            <p class="universidad-alumno">
+                Facultad de Ciencias y Tecnologías
+            </p>
+            <button class="button" onclick="myCanvas('imagenes/Roberto.jpg','myCanvas2')">Button</button>
+        </div>
+        <canvas id="myCanvas2" width="300" height="300">
+            Tu navegador no soporta canvas.
+        </canvas>
+    </div>
+</body>
+
+</html>
