@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Contador</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+</head>
+
+<body>
+    <div class="titulo">
+        <h1>Bienvenido a tu nuevo contador</h1>
+    </div>
+    <div class="contenedor">
+        <p class="tituloBox">Contador</p>
+        <p class="contar" id="contar">0</p>
+        <div class="botones">
+            <button class="incrementar" id="incrementar">Añadir</button>
+            <button class="reducir" id="reducir">Reducir</button>
+            <button class="reset" id="reset">Reiniciar</button>
+        </div>
+    </div>
+    <script>
+        const contador = document.getElementById("contar");
+        const sumar = document.getElementById("incrementar");
+        const restar = document.getElementById("reducir");
+        const reset = document.getElementById("reset");
+
+        console.log(sumar); 
+        let numero = 0;
+
+        sumar.addEventListener("click", () => {
+            numero++;
+            contador.innerHTML = numero;
+        });
+
+        restar.addEventListener("click", () => {
+
+            if (numero == 0) { }
+            else {
+                numero--;
+                contador.innerHTML = numero;
+            }
+
+        });
+
+        reset.addEventListener("click", () => {
+            numero = 0;
+            contador.innerHTML = numero;
+        });
+    </script>
+</body>
+</html>

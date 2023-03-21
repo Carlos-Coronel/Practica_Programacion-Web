@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/videos.css">
+</head>
+
+<body>
+
+    <script>
+        function openFullscreen(idvideo) {
+            var elem = document.getElementById(idvideo);
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            }
+            if (elem.pause){
+                elem.play();
+            }
+                
+        }
+    </script>
+
+
+    <h3 class="title-cont"> Galeria de Videos</h3>
+    <div class="container">
+        <div class="cont-main">
+            <div class="video-main">
+                <video id="video_1" src="media/videos/y2mate.com_1.mp4" controls muted autoplay></video>
+                <h3 class="title-video " style="text-align: center;""> Tutorial React 1 </h3>
+            </div>
+        </div>
+
+        <div class=" cont-list">
+                    <div class="video-list">
+                        <video id="myvideo1" src="media/videos/y2mate.com_1.mp4" controls ></video>
+                        <div style="display: flex;">
+                            <h3 class="title-video"> 0.1 Tutorial React 1</h3>
+                            <button onclick="openFullscreen('myvideo1');">Play</button>
+                        </div>
+                    </div>
+                    <div class="video-list">
+                        <video id="myvideo2" src="media/videos/y2mate.com_2.mp4" controls></video>
+                        <div style="display: flex;">
+                            <h3 class="title-video"> 0.2 Tutorial React 2</h3>
+                            <button onclick="openFullscreen('myvideo2');">Play</button>
+                        </div>
+
+                    </div>
+                    <div class="video-list">
+                        <video id="myvideo3" src="media/videos/y2mate.com_3.mp4" controls></video>
+                        <div style="display: flex;">
+                            <h3 class="title-video"> 0.2 Tutorial React 3</h3>
+                            <button onclick="openFullscreen('myvideo3');">Play</button>
+                        </div>
+                    </div>
+                    <div class="video-list">
+                        <video id="myvideo4" src="media/videos/y2mate.com_4.mp4" controls></video>
+                        <div style="display: flex;">
+                            <h3 class="title-video"> 0.2 Tutorial React 4</h3>
+                            <button onclick="openFullscreen('myvideo4');">Play</button>
+                        </div>
+                    </div>
+                    <div class="video-list">
+                        <video id="myvideo5" src="media/videos/y2mate.com_5.mp4" controls></video>
+                        <div style="display: flex;">
+                            <h3 class="title-video"> 0.2 Tutorial React 5</h3>
+                            <button onclick="openFullscreen('myvideo5');">Play</button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+</body>
+
+</html>
