@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+  }
+  body {
+    background: steelblue;
+    font-family: "Open Sans", arial;
+  }
+  table {
+    border-collapse: collapse;
+    margin: 50px auto;
+    background: white;
+  }
+  
+  td {
+    border-right: 1px solid #cccccc;
+    padding: 10px;
+  }
