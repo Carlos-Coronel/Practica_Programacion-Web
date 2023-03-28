@@ -3,6 +3,7 @@
 
 <head>
     <title>Tabla de Multiplicar</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
@@ -10,9 +11,9 @@
         function multiplicar() {
             let n = 0, i = 0, c = "";
             n = parseInt(document.getElementById("n1").value);
-            c = c + "<table border='1'>";
+            c = c + "<table class='js-table'>";
             for (i = 1; i <= 10; i++) {
-                c = c + "<tr><td>" + n + "</td><td>X</td><td>" + i + "</td><td>" + (n * i) + "</td></tr><tr><td>" + n + "</td><td>X</td><td>" + i + "</td><td>" + (n * i) + "</td></tr>";
+                c = c + "<tr><td><h3>" + n + "</h3></td><td><h3>X</h3></td><td><h3>" + i + "</h3></td><td><h3>" + (n * i) + "</h3></td></tr><tr><td><h3>" + n + "</h3></td><td>X</td><td><h3>" + i + "</h3></td><td><h3>" + (n * i) + "</h3></td></tr>";
             }
             c = c + "</table>";
             document.getElementById('res').innerHTML = c
@@ -20,12 +21,15 @@
     </script>
 
     <body>
-        Numero:
-        <input type="text" name="" id="n1" value="">
-        <br>
-        <button onclick="multiplicar();">tabla</button>
-        <br>
-        <p id="res"></p>
+        <div class="Contenedor-Multiplicar">
+            <h3>Numero:</h3>
+            <input type="text" name="" id="n1" value="">
+            <br>
+            <button onclick="multiplicar();">tabla</button>
+            <br>
+            <p id="res"></p>
+        </div>
+
     </body>
 </body>
 

@@ -6,6 +6,10 @@
 body {
     text-align: center;
     justify-items: center;
+    background: url("../imagenes/audifono.png") no-repeat right top;
+    background-attachment: fixed;
+    margin-right: 2px;
+
 }
 
 a {
@@ -38,9 +42,39 @@ table {
 
 }
 
-.contenido-index{
+.contenido-index {
     background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5));
 }
+
+
+#boton-contenedor {
+    width: 45px;
+    height: 45px;
+}
+
+.indexCont img {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.indexCont img:hover {
+    opacity: 1;
+}
+
+
+.js-table {
+    table-layout: auto;
+    width: 50%;
+    border: 4px solid rgb(0, 89, 255);
+}
+
+.js-table td {
+    border: 3px solid rgb(0, 208, 255);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
 
 .contenedor-testimonio {
     width: 1170px;
@@ -49,8 +83,7 @@ table {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #fff;
-    box-shadow: 0 3px 13px 1px rgb(0 0 0 /30%);
+    box-shadow: 0 3px 13px 1px rgb(0 0 0 /60%);
 }
 
 .contenedor-txt-testimonio {
@@ -68,6 +101,7 @@ table {
     fill-rule: evenodd
 }
 
+
 .nombre-alumno {
     font-size: 1.3rem;
 }
@@ -78,4 +112,192 @@ table {
 
 .universidad-alumno {
     font-size: 1.1rem;
+}
+
+body.Form-contenerdor {
+    height: 100%;
+    font-family: 'Noto Sans', sans-serif;
+    background: url("../imagenes/music2.webp") no-repeat left top;
+    background-attachment: fixed;
+    margin-right: 2px;
+}
+
+.contact_form {
+    width: 460px;
+    height: auto;
+    margin: 80px auto;
+    border-radius: 10px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    background-color: #fbfbfb;
+    padding-left: 30px;
+}
+
+
+.contact_form input[type=text] {
+    background-color: #fbfbfb;
+    width: 408px;
+    height: 40px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ab4493;
+    margin-top: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+.contact_form input[type=button],
+input[type=submit],
+input[type=reset] {
+    background-color: #ab4493;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    margin: 20px 50px;
+    cursor: pointer;
+}
+
+.contact_form input[type="checkbox"],
+input[type="radio"] {
+    width: 40px;
+    height: 40px;
+}
+
+
+.contact_form select {
+    width: 408px;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    border-style: solid;
+    border-color: #ab4493;
+}
+
+.contact_form label {
+    display: block;
+    float: center;
+}
+
+
+.contact_form h1 {
+    font-size: 39px;
+    text-align: letf;
+    padding-bottom: 20px;
+    color: #ab4493;
+}
+
+.contact_form h3 {
+    font-size: 16px;
+    padding-bottom: 30px;
+    color: #0e0e0e;
+}
+
+
+
+.cont-list {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
+
+.box {
+    height: 16rem;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    background: rgba(0, 183, 255, 0.253);
+    border-radius: 15px;
+    margin: 2rem;
+}
+
+.imagen img {
+    height: 100%;
+    width: 100%;
+    margin: 2rem;
+}
+
+.audio {
+    margin: 4rem;
+    width: 60%;
+    height: 30%;
+    background: rgb(159, 196, 193);
+    border-radius: 80%;
+    align-items: end;
+}
+
+.audio audio {
+    width: 100%;
+    border-radius: 80%;
+    outline: none;
+}
+
+
+.playList {
+    height: 100%;
+    background: url("../imagenes/music2.webp") no-repeat right top;
+    background-attachment: fixed;
+    margin-right: 2px;
+}
+
+.title-cont {
+    color: black;
+    font-size: 55px;
+    text-align: center;
+    padding: 10px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+    align-items: flex-start;
+    padding: 5px 5px;
+}
+
+.cont-main {
+    border-radius: 5px;
+    width: auto;
+}
+
+.video-main video {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 10px 10px 20px 10px rgb(0 0 0 /100%);
+}
+
+.title-video {
+    color: black;
+    font-size: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.cont-list-videos {
+    border-radius: 15px;
+    width: max(65%, 250px);
+    height: 50%;
+    overflow-y: scroll;
+    box-shadow: 60px 10px 10px 10px rgb(0 0 0 /70%);
+}
+
+.video-list video {
+    height: 100px;
+    border-radius: 5px;
+    margin: 10px;
+    width: 100%;
+}
+
+.Gallery-Youtube {
+    background:  url("../imagenes/Youtube.jpg");
+    font-family: "Open Sans", arial;
+}
+
+.Gallery-Youtube table {
+    border-collapse: collapse;
+    margin: 50px auto;
+    background-image: linear-gradient(rgba(0, 195, 255, 0.5), rgba(255, 255, 0, 0.5));}
+
+.Gallery-Youtube td {
+    padding: 10px;
 }

@@ -2,24 +2,19 @@
 
 <head>
     <title>Formulario Alumno</title>
-    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
+<body class="Form-contenerdor">
     <script>
         function mostrar() {
             var reg_1 = document.getElementById("nombre");
             var reg_2 = document.getElementById("apellido");
             var reg_3 = document.getElementById("edad");
             var reg_4 = document.getElementById("ciudad");
-            var reg_5 = "", reg_6 = "", reg_7 = "", reg_8 = "", reg_9 = "";
+            var reg_6 = "", reg_7 = "", reg_8 = "", reg_9 = "";
 
-            if (document.getElementById("r_publico").checked) {
-                reg_5 = document.getElementById("r_publico").value;
-            }
-            if (document.getElementById("r_privado").checked) {
-                reg_5 = document.getElementById("r_privado").value;
-            }
+
             if (document.getElementById('carnet').checked) {
                 reg_6 = document.getElementById("carnet").value;
             }
@@ -33,10 +28,14 @@
                 reg_9 = document.getElementById("certificadoEstudio").value;
             }
             document.write(
-                "<table cellpadding='5' cellspacing='0' border='1'>" +
-                "<tr> <td>Nombre</td> <td>Apellido</td> <td>Edad</td> <td>Ciudad</td> <td>Colegio</td> <td>Documentos</td> </tr>" +
-                "<tr> <td>" + reg_1.value + "</td> <td>" + reg_2.value + "</td> <td>" + reg_3.value + "</td> <td>" + reg_4.value + "</td> <td>" + reg_5 + "</td>" +
-                "<td ><ul style='list-style-type:none;'><li>" + reg_6 + "</li><li>" + reg_7 + "</li><li>" + reg_8 + "</li><li>" + reg_9 + "</li></ul></td></tr></table>"
+                "<html> <head> <title>Formulario Alumno</title> <link rel='stylesheet' href='css/styles.css'> </head>"+
+                "<body class='Form-contenerdor'>" +
+                "<h1>Recibimos estos Datos</h1>"+
+                "<table style='border: 3px blue solid; margin: 0 auto;''> " +
+                "<tr> <td style='border: 3px red solid'>Nombre</td> <td style='border: 3px red solid'>Apellido</td> <td style='border: 3px red solid'>Edad</td> <td style='border: 3px red solid'>Ciudad</td><td style='border: 3px red solid'>Documentos</td> </tr>" +
+                "<tr> <td style='border: 3px red solid'>" + reg_1.value + "</td> <td style='border: 3px red solid'>" + reg_2.value + "</td> <td style='border: 3px red solid'>" + reg_3.value + "</td> <td style='border: 3px red solid'>" + reg_4.value + "</td>" +
+                "<td style='border: 3px red solid'><ul style='list-style-type:none;'><li>" + reg_6 + "</li><li>" + reg_7 + "</li><li>" + reg_8 + "</li><li>" + reg_9 + "</li></ul></td></tr></table>"
+                +"</body> </html>"
             );
         }
     </script>
@@ -63,20 +62,7 @@
                 <option value="Paraguari">Paraguari</option>
                 <option value="Campo 9">Campo 9</option>
             </select>
-
-            <h3>Colegio de procedencia:</h3>
-            <table>
-                <tbody>
-                    <tr>
-                        <td><label>Publico</label></td>
-                        <td> <input type="radio" name="txtColegio" id="r_publico" value="Publico"></td>
-                    </tr>
-                    <tr>
-                        <td> <label>Privado</label></td>
-                        <td><input type="radio" name="txtColegio" id="r_privado" value="Privado"></td>
-                    </tr>
-                </tbody>
-            </table>
+            <br>
             <br>
             <h3>Documentos Presentados</h3>
             <table>
